@@ -1,6 +1,13 @@
-# Hoja de Trabajo 6 – Competencia entre plataformas
+# Hoja de Trabajo 6 – Modelación y Simulación
 
-Estudiamos un modelo de Lotka-Volterra competitivo entre dos plataformas con los parámetros del grupo 5. El Task 1 (análisis analítico) está en `Task1.ipynb`. El Task 2 (simulación numérica con Euler y RK4 propios, retrato de fases, cuencas de atracción, estabilidad local e intervenciones) está en `Task2.ipynb`.
+Repositorio de la Hoja de Trabajo 6 (CC2017, grupo 5). Contiene un notebook por cada task:
+
+- **Task 1** (`Task1.ipynb`): análisis analítico de un modelo de Lotka-Volterra competitivo entre dos plataformas, con los parámetros del grupo 5 (equilibrios, jacobiana y clasificación, nulclinas y campo vectorial).
+- **Task 2** (`Task2.ipynb`): simulación numérica del mismo modelo con Euler y RK4 propios, retrato de fases, cuencas de atracción, estabilidad local, paso máximo de Euler e intervenciones.
+- **Task 3** (`Task3.ipynb`): modelo de un lago con reciclaje de nutrientes, ẋ = a − b·x + x²/(x²+1) con b = 0.55. Incluye el diagrama de equilibrios y la histéresis con un barrido lento de la carga, y las señales de alerta temprana (varianza y autocorrelación con Euler-Maruyama propio, detrending, ventanas móviles y tau de Kendall, con el control de falsas alarmas).
+
+Las figuras generadas se guardan en `img/`.
+
 ## Cómo levantarlo
 
 Se recomienda Python 3.10+ (probado con 3.14).
@@ -29,7 +36,7 @@ jupyter notebook
 
 También se puede abrir la carpeta en VS Code y elegir el kernel de `.venv`.
 
-Para re-ejecutar el notebook sin interfaz (regenera las figuras en `img/`):
+Para re-ejecutar un notebook sin interfaz (regenera las figuras en `img/`), cambiando `Task2` por `Task1` o `Task3` según el caso:
 
 ```bash
 jupyter nbconvert --to notebook --execute --inplace Task2.ipynb
